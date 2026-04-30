@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ekattor IT — Honoring the spirit of 1971. Building Bangladesh's digital future." />
+  <title>Ekattor IT — The Spirit of '71</title>
+
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <!-- Distinctive Typography: Cormorant Garamond (display) + Manrope (body) + Hind Siliguri (Bangla) -->
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Manrope:wght@300;400;500;600;700;800&family=Hind+Siliguri:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ============================================
+       DESIGN TOKENS
+       ============================================ */
+    :root {
+      --color-bg: #0a0806;
+      --color-bg-soft: #14100b;
+      --color-ink: #f5ebd6;
+      --color-ink-soft: #c9b896;
+      --color-ink-mute: #7a6b54;
+      --color-gold: #d4a04c;
+      --color-gold-bright: #f4c674;
+      --color-crimson: #c1272d;
+      --color-jade: #006a4e;
+
+      --font-display: 'Cormorant Garamond', 'Times New Roman', serif;
+      --font-body: 'Manrope', system-ui, sans-serif;
+      --font-bangla: 'Hind Siliguri', sans-serif;
+
+      --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+      --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+    }
+
+    /* ============================================
+       RESET & BASE
+       ============================================ */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--color-bg);
+      color: var(--color-ink);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    img, video {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font-family: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    /* ============================================
+       GRAIN OVERLAY (atmosphere)
+       ============================================ */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' /%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.4'/%3E%3C/svg%3E");
+      opacity: 0.06;
+      pointer-events: none;
+      z-index: 9999;
+      mix-blend-mode: overlay;
+    }
+
+    /* ============================================
+       NAVIGATION
+       ============================================ */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 100;
+      padding: 1.75rem 3rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      transition: all 0.4s var(--ease-out);
+    }
+
+    .nav.scrolled {
+      background: rgba(10, 8, 6, 0.85);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      padding: 1.25rem 3rem;
+      border-bottom: 1px solid rgba(212, 160, 76, 0.15);
+    }
+
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.65rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--color-ink);
+    }
+
+    .nav-logo span {
+      color: var(--color-gold);
+      font-style: italic;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2.5rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--color-ink-soft);
+      position: relative;
+      transition: color 0.3s var(--ease-out);
+    }
+
+    .nav-links a:hover {
+      color: var(--color-gold-bright);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 0;
+      width: 0;
+      height: 1px;
+      background: var(--color-gold);
+      transition: width 0.4s var(--ease-out);
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    .nav-cta {
+      padding: 0.7rem 1.5rem;
+      border: 1px solid var(--color-gold);
+      color: var(--color-gold);
+      font-size: 0.78rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 600;
+      transition: all 0.4s var(--ease-out);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .nav-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--color-gold);
+      transform: translateY(100%);
+      transition: transform 0.4s var(--ease-out);
+      z-index: -1;
+    }
+
+    .nav-cta:hover {
+      color: var(--color-bg);
+    }
+
+    .nav-cta:hover::before {
+      transform: translateY(0);
+    }
+
+    /* ============================================
+       HERO SECTION
+       ============================================ */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+      background: var(--color-bg);
+    }
+
+    .hero-media {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
+    .hero-poster,
+    .hero-video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .hero-poster {
+      z-index: 1;
+      transition: opacity 0.8s var(--ease-out);
+    }
+
+    .hero-video {
+      z-index: 2;
+      opacity: 0;
+    }
+
+    /* Cinematic overlay gradient */
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      background:
+        linear-gradient(180deg, rgba(10, 8, 6, 0.5) 0%, rgba(10, 8, 6, 0.15) 35%, rgba(10, 8, 6, 0.85) 100%),
+        linear-gradient(90deg, rgba(10, 8, 6, 0.7) 0%, rgba(10, 8, 6, 0) 60%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 3rem;
+      width: 100%;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.85rem;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      margin-bottom: 2rem;
+      opacity: 0;
+      animation: fadeUp 1s var(--ease-out) 0.3s forwards;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      width: 40px;
+      height: 1px;
+      background: var(--color-gold);
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(3rem, 8vw, 7.5rem);
+      font-weight: 400;
+      line-height: 0.95;
+      letter-spacing: -0.02em;
+      max-width: 900px;
+      margin-bottom: 2rem;
+      color: var(--color-ink);
+    }
+
+    .hero-title .line {
+      display: block;
+      overflow: hidden;
+    }
+
+    .hero-title .line span {
+      display: inline-block;
+      transform: translateY(110%);
+      animation: rise 1.2s var(--ease-out) forwards;
+    }
+
+    .hero-title .line:nth-child(1) span { animation-delay: 0.5s; }
+    .hero-title .line:nth-child(2) span { animation-delay: 0.7s; }
+    .hero-title .line:nth-child(3) span { animation-delay: 0.9s; }
+
+    .hero-title em {
+      font-style: italic;
+      color: var(--color-gold-bright);
+      font-weight: 300;
+    }
+
+    .hero-bangla {
+      font-family: var(--font-bangla);
+      font-size: clamp(1.1rem, 1.8vw, 1.4rem);
+      color: var(--color-ink-soft);
+      margin-bottom: 2.5rem;
+      letter-spacing: 0.02em;
+      opacity: 0;
+      animation: fadeUp 1s var(--ease-out) 1.2s forwards;
+    }
+
+    .hero-description {
+      max-width: 520px;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      color: var(--color-ink-soft);
+      margin-bottom: 3rem;
+      opacity: 0;
+      animation: fadeUp 1s var(--ease-out) 1.4s forwards;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1.25rem;
+      flex-wrap: wrap;
+      opacity: 0;
+      animation: fadeUp 1s var(--ease-out) 1.6s forwards;
+    }
+
+    .btn {
+      padding: 1.1rem 2.25rem;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      transition: all 0.4s var(--ease-out);
+      position: relative;
+      overflow: hidden;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .btn-primary {
+      background: var(--color-gold);
+      color: var(--color-bg);
+    }
+
+    .btn-primary:hover {
+      background: var(--color-gold-bright);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 30px rgba(212, 160, 76, 0.3);
+    }
+
+    .btn-secondary {
+      border: 1px solid rgba(245, 235, 214, 0.3);
+      color: var(--color-ink);
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--color-ink);
+      background: rgba(245, 235, 214, 0.05);
+    }
+
+    .btn .arrow {
+      display: inline-block;
+      transition: transform 0.4s var(--ease-out);
+    }
+
+    .btn:hover .arrow {
+      transform: translateX(4px);
+    }
+
+    /* Hero side stamp — vertical year */
+    .hero-stamp {
+      position: absolute;
+      right: 3rem;
+      top: 50%;
+      transform: translateY(-50%);
+      writing-mode: vertical-rl;
+      font-family: var(--font-display);
+      font-size: 0.9rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--color-ink-mute);
+      z-index: 10;
+      opacity: 0;
+      animation: fadeUp 1.2s var(--ease-out) 2s forwards;
+    }
+
+    .hero-stamp::before {
+      content: '';
+      display: block;
+      width: 1px;
+      height: 50px;
+      background: var(--color-gold);
+      margin: 0 auto 1.5rem;
+    }
+
+    /* Scroll indicator */
+    .scroll-indicator {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.7rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--color-ink-mute);
+      opacity: 0;
+      animation: fadeUp 1s var(--ease-out) 2.2s forwards;
+    }
+
+    .scroll-line {
+      width: 1px;
+      height: 50px;
+      background: linear-gradient(to bottom, var(--color-gold), transparent);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .scroll-line::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      background: var(--color-gold-bright);
+      animation: scrollDown 2s var(--ease-in-out) infinite;
+    }
+
+    /* ============================================
+       FEATURES SECTION (Pillars)
+       ============================================ */
+    .pillars {
+      padding: 8rem 3rem;
+      position: relative;
+      background: var(--color-bg);
+    }
+
+    .pillars::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 1px;
+      height: 80px;
+      background: linear-gradient(to bottom, transparent, var(--color-gold));
+    }
+
+    .section-header {
+      max-width: 1400px;
+      margin: 0 auto 5rem;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 4rem;
+      align-items: end;
+    }
+
+    .section-label {
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .section-label::before {
+      content: '01 /';
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-style: italic;
+      letter-spacing: normal;
+      text-transform: none;
+    }
+
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 5vw, 4.25rem);
+      font-weight: 400;
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+    }
+
+    .section-title em {
+      font-style: italic;
+      color: var(--color-gold);
+      font-weight: 300;
+    }
+
+    .pillars-grid {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      background: rgba(212, 160, 76, 0.15);
+      border-top: 1px solid rgba(212, 160, 76, 0.15);
+      border-bottom: 1px solid rgba(212, 160, 76, 0.15);
+    }
+
+    .pillar {
+      padding: 3.5rem 2.5rem;
+      background: var(--color-bg);
+      transition: background 0.5s var(--ease-out);
+      position: relative;
+    }
+
+    .pillar:hover {
+      background: var(--color-bg-soft);
+    }
+
+    .pillar-number {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      font-style: italic;
+      color: var(--color-gold);
+      margin-bottom: 2rem;
+      letter-spacing: 0.05em;
+    }
+
+    .pillar-icon {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 2rem;
+      color: var(--color-gold);
+    }
+
+    .pillar h3 {
+      font-family: var(--font-display);
+      font-size: 1.85rem;
+      font-weight: 500;
+      line-height: 1.15;
+      margin-bottom: 1rem;
+      color: var(--color-ink);
+    }
+
+    .pillar p {
+      font-size: 0.95rem;
+      line-height: 1.7;
+      color: var(--color-ink-soft);
+    }
+
+    .pillar-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-top: 2rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--color-gold);
+      transition: gap 0.3s var(--ease-out);
+    }
+
+    .pillar-link:hover {
+      gap: 1rem;
+    }
+
+    /* ============================================
+       MANIFESTO SECTION
+       ============================================ */
+    .manifesto {
+      padding: 10rem 3rem;
+      background: var(--color-bg-soft);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .manifesto::before {
+      content: '৭১';
+      position: absolute;
+      top: 50%;
+      right: -2rem;
+      transform: translateY(-50%);
+      font-family: var(--font-bangla);
+      font-size: clamp(20rem, 40vw, 38rem);
+      font-weight: 700;
+      color: rgba(212, 160, 76, 0.04);
+      line-height: 1;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    .manifesto-inner {
+      max-width: 900px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .manifesto-quote {
+      font-family: var(--font-display);
+      font-size: clamp(1.75rem, 3.5vw, 2.85rem);
+      font-weight: 300;
+      line-height: 1.35;
+      letter-spacing: -0.005em;
+      color: var(--color-ink);
+      font-style: italic;
+    }
+
+    .manifesto-quote::before {
+      content: '"';
+      font-size: 5rem;
+      color: var(--color-gold);
+      line-height: 0;
+      vertical-align: -0.4em;
+      margin-right: 0.5rem;
+    }
+
+    .manifesto-attribution {
+      margin-top: 3rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      font-weight: 500;
+    }
+
+    .manifesto-attribution::before {
+      content: '';
+      width: 60px;
+      height: 1px;
+      background: var(--color-gold);
+    }
+
+    /* ============================================
+       FOOTER
+       ============================================ */
+    .footer {
+      padding: 5rem 3rem 2rem;
+      border-top: 1px solid rgba(212, 160, 76, 0.15);
+      background: var(--color-bg);
+    }
+
+    .footer-grid {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 4rem;
+    }
+
+    .footer-brand h4 {
+      font-family: var(--font-display);
+      font-size: 1.85rem;
+      font-weight: 500;
+      margin-bottom: 1rem;
+    }
+
+    .footer-brand h4 span {
+      color: var(--color-gold);
+      font-style: italic;
+    }
+
+    .footer-brand p {
+      max-width: 320px;
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: var(--color-ink-soft);
+    }
+
+    .footer-col h5 {
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-gold);
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    .footer-col ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .footer-col a {
+      font-size: 0.9rem;
+      color: var(--color-ink-soft);
+      transition: color 0.3s;
+    }
+
+    .footer-col a:hover {
+      color: var(--color-gold-bright);
+    }
+
+    .footer-bottom {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(212, 160, 76, 0.1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8rem;
+      color: var(--color-ink-mute);
+    }
+
+    .footer-bottom span {
+      color: var(--color-gold);
+    }
+
+    /* ============================================
+       ANIMATIONS
+       ============================================ */
+    @keyframes rise {
+      to { transform: translateY(0); }
+    }
+
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes scrollDown {
+      0% { top: -50%; }
+      100% { top: 100%; }
+    }
+
+    /* ============================================
+       RESPONSIVE — TABLET
+       ============================================ */
+    @media (max-width: 1024px) {
+      .nav, .pillars, .manifesto, .footer {
+        padding-left: 2rem;
+        padding-right: 2rem;
+      }
+
+      .pillars-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .section-header {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    /* ============================================
+       RESPONSIVE — MOBILE
+       ============================================ */
+    @media (max-width: 768px) {
+      .nav {
+        padding: 1.25rem 1.5rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero {
+        padding: 6rem 0 4rem;
+      }
+
+      .hero-content {
+        padding: 0 1.5rem;
+      }
+
+      .hero-stamp {
+        display: none;
+      }
+
+      /* Hide video on mobile, show poster only — saves bandwidth */
+      .hero-video {
+        display: none;
+      }
+
+      .pillars, .footer {
+        padding: 5rem 1.5rem;
+      }
+
+      .manifesto {
+        padding: 6rem 1.5rem;
+      }
+
+      .pillars-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+
+      .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        justify-content: center;
+      }
+    }
+
+    /* Reduced motion preference */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+      }
+      .hero-video { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav-logo">Ekattor<span>IT</span></a>
+    <ul class="nav-links">
+      <li><a href="#pillars">Pillars</a></li>
+      <li><a href="#manifesto">Manifesto</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#contact" class="nav-cta">Get Started</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-media">
+      <!-- Poster image: shows immediately while video loads -->
+      <img
+        src="https://cdn.jsdelivr.net/gh/arif-rahman-cse/ekattorit_web_assets@main/hero_01.png"
+        alt="A young man holding the Bangladesh flag at sunset"
+        class="hero-poster"
+        fetchpriority="high"
+      />
+      <!-- Video: lazy-loaded after page becomes interactive -->
+      <video
+        class="hero-video"
+        id="heroVideo"
+        autoplay
+        muted
+        playsinline
+        preload="auto"
+        poster="https://cdn.jsdelivr.net/gh/arif-rahman-cse/ekattorit_web_assets@main/hero_01.png"
+      >
+        <source
+          data-src="https://cdn.jsdelivr.net/gh/arif-rahman-cse/ekattorit_web_assets@main/hero_01.webm"
+          type="video/webm"
+        />
+        <source
+          data-src="https://cdn.jsdelivr.net/gh/arif-rahman-cse/ekattorit_web_assets@main/hero_01.mp4"
+          type="video/mp4"
+        />
+      </video>
+      <div class="hero-overlay"></div>
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow">Born of 1971 · Built for Tomorrow</div>
+
+      <h1 class="hero-title">
+        <span class="line"><span>The spirit of</span></span>
+        <span class="line"><span><em>seventy-one,</em></span></span>
+        <span class="line"><span>coded forward.</span></span>
+      </h1>
+
+      <p class="hero-bangla">স্বাধীনতার চেতনায়, প্রযুক্তির পথে।</p>
+
+      <p class="hero-description">
+        We are Ekattor IT — a software studio rooted in the courage of '71.
+        We build digital products that carry the same conviction: bold,
+        deliberate, and made to endure.
+      </p>
+
+      <div class="hero-actions">
+        <a href="#pillars" class="btn btn-primary">
+          Explore Our Work
+          <span class="arrow">→</span>
+        </a>
+        <a href="#manifesto" class="btn btn-secondary">
+          Our Manifesto
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-stamp">
+      Est. — Dhaka, Bangladesh
+    </div>
+
+    <div class="scroll-indicator">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- PILLARS SECTION -->
+  <section class="pillars" id="pillars">
+    <div class="section-header">
+      <div class="section-label">Our Pillars</div>
+      <h2 class="section-title">
+        Three principles that <em>shape</em> every line of code we write.
+      </h2>
+    </div>
+
+    <div class="pillars-grid">
+      <article class="pillar">
+        <div class="pillar-number">i.</div>
+        <svg class="pillar-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2">
+          <path d="M24 6 L42 16 L42 32 L24 42 L6 32 L6 16 Z" />
+          <path d="M24 6 L24 42 M6 16 L42 32 M42 16 L6 32" />
+        </svg>
+        <h3>Crafted with conviction</h3>
+        <p>
+          Every product we ship reflects deliberate thought. No shortcuts,
+          no boilerplate — only purposeful engineering and design that
+          honors the people who use it.
+        </p>
+        <a href="#" class="pillar-link">
+          Read more <span>→</span>
+        </a>
+      </article>
+
+      <article class="pillar">
+        <div class="pillar-number">ii.</div>
+        <svg class="pillar-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2">
+          <circle cx="24" cy="24" r="18" />
+          <circle cx="24" cy="24" r="9" />
+          <path d="M24 6 L24 42 M6 24 L42 24" />
+        </svg>
+        <h3>Built for endurance</h3>
+        <p>
+          Software that stands. We build for systems that need to live for
+          a decade — clean architecture, honest documentation, and code our
+          successors will thank us for.
+        </p>
+        <a href="#" class="pillar-link">
+          Read more <span>→</span>
+        </a>
+      </article>
+
+      <article class="pillar">
+        <div class="pillar-number">iii.</div>
+        <svg class="pillar-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2">
+          <path d="M8 38 L24 8 L40 38 Z" />
+          <path d="M16 30 L32 30" />
+          <circle cx="24" cy="22" r="2" fill="currentColor" />
+        </svg>
+        <h3>Rooted in Bangladesh</h3>
+        <p>
+          We are a studio of this soil. Our work draws from a culture of
+          resilience and an obligation to lift the next generation of
+          Bangladeshi technologists alongside us.
+        </p>
+        <a href="#" class="pillar-link">
+          Read more <span>→</span>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <!-- MANIFESTO SECTION -->
+  <section class="manifesto" id="manifesto">
+    <div class="manifesto-inner">
+      <p class="manifesto-quote">
+        We do not build software to chase trends. We build it the way our
+        forebears fought — with patience, with precision, and with the
+        unshakeable belief that what we make today will outlast us.
+      </p>
+      <div class="manifesto-attribution">
+        The Ekattor Manifesto
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contact">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h4>Ekattor<span>IT</span></h4>
+        <p>
+          A software studio in Dhaka, Bangladesh — building digital products
+          rooted in the spirit of 1971.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h5>Studio</h5>
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Process</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Work</h5>
+        <ul>
+          <li><a href="#">Case Studies</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Clients</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Connect</h5>
+        <ul>
+          <li><a href="mailto:hello@ekattorit.com">hello@ekattorit.com</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>© 2026 Ekattor IT · All rights reserved</div>
+      <div>Made with <span>conviction</span> in Dhaka 🇧🇩</div>
+    </div>
+  </footer>
+
+  <script>
+    // ============================================
+    // CROSSFADE LOOP: Two videos alternate so the
+    // loop restart is an opacity blend, not a cut
+    // ============================================
+    const CROSSFADE_MS   = 1200;  // blend duration
+    const RESTART_LEAD_S = 1.5;   // seconds before end to start blend
+
+    function armLoop(current, next) {
+      const ac = new AbortController();
+      const { signal } = ac;
+
+      current.addEventListener('timeupdate', () => {
+        if (!current.duration || current.currentTime < current.duration - RESTART_LEAD_S) return;
+
+        ac.abort(); // remove both listeners immediately
+
+        next.currentTime = 0;
+        next.play().catch(() => {});
+
+        current.style.transition = `opacity ${CROSSFADE_MS}ms ease-in-out`;
+        next.style.transition    = `opacity ${CROSSFADE_MS}ms ease-in-out`;
+        current.style.opacity    = '0';
+        next.style.opacity       = '1';
+
+        setTimeout(() => {
+          current.pause();
+          current.style.transition = 'none';
+          next.style.transition    = 'none';
+          armLoop(next, current); // swap roles for next cycle
+        }, CROSSFADE_MS + 50);
+      }, { signal });
+
+      // Hard fallback if timeupdate misses the window
+      current.addEventListener('ended', () => {
+        ac.abort();
+        current.currentTime = 0;
+        current.play().catch(() => {});
+        armLoop(current, next);
+      }, { signal });
+    }
+
+    // ============================================
+    // PERFORMANCE: Lazy-load hero video after load
+    // ============================================
+    window.addEventListener('load', () => {
+      const videoA = document.getElementById('heroVideo');
+      const sourceData = Array.from(videoA.querySelectorAll('source[data-src]'))
+        .map(s => ({ src: s.dataset.src, type: s.type }));
+
+      if (!sourceData.length) return;
+
+      // Build standby video B with same sources
+      const videoB = document.createElement('video');
+      videoB.className  = 'hero-video';
+      videoB.muted      = true;
+      videoB.playsInline = true;
+      videoB.preload    = 'auto';
+      sourceData.forEach(({ src, type }) => {
+        const s = document.createElement('source');
+        s.src  = src;
+        s.type = type;
+        videoB.appendChild(s);
+      });
+      videoA.insertAdjacentElement('afterend', videoB);
+      videoB.load(); // preload in background while A initialises
+
+      // Activate real sources on A
+      videoA.querySelectorAll('source[data-src]').forEach((s, i) => {
+        s.src = sourceData[i].src;
+      });
+
+      setTimeout(() => {
+        videoA.load();
+
+        videoA.addEventListener('canplay', () => {
+          videoA.play().catch(() => {});
+          videoA.style.transition = 'opacity 1.2s ease-out';
+          videoA.style.opacity    = '1';
+
+          const poster = document.querySelector('.hero-poster');
+          if (poster) {
+            poster.style.transition = 'opacity 1.2s ease-out';
+            poster.style.opacity    = '0';
+          }
+
+          armLoop(videoA, videoB);
+        }, { once: true });
+      }, 400);
+    });
+
+    // ============================================
+    // Sticky nav: change style on scroll
+    // ============================================
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 50);
+    });
+  </script>
+
+</body>
+</html>
