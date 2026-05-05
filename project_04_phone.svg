@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 560">
+  <rect width="280" height="560" rx="28" fill="#1c1108"/>
+  <rect x="8" y="8" width="264" height="544" rx="22" fill="#0a0806"/>
+  <text x="22" y="26" fill="#7a6b54" font-size="10" font-family="sans-serif">08:20</text>
+  <rect x="210" y="15" width="24" height="10" rx="3" fill="none" stroke="#7a6b54" stroke-width="1.5"/>
+  <rect x="211" y="16" width="16" height="8" rx="2" fill="#7a6b54" opacity="0.6"/>
+  <!-- App header - medical teal -->
+  <rect x="8" y="34" width="264" height="52" fill="#0e4a4a"/>
+  <text x="140" y="66" text-anchor="middle" fill="#f5ebd6" font-size="13" font-family="sans-serif" font-weight="bold">71 HealthBridge</text>
+  <!-- Patient card -->
+  <rect x="8" y="86" width="264" height="100" fill="#0d0a06"/>
+  <rect x="18" y="96" width="244" height="80" rx="10" fill="#14100b"/>
+  <circle cx="52" cy="136" r="24" fill="#0e4a4a"/>
+  <text x="52" y="142" text-anchor="middle" fill="#f5ebd6" font-size="16" font-family="sans-serif" font-weight="bold">RA</text>
+  <text x="88" y="122" fill="#f5ebd6" font-size="12" font-family="sans-serif" font-weight="600">রহিম আহমেদ</text>
+  <text x="88" y="138" fill="#7a6b54" font-size="9" font-family="sans-serif">বয়স ৪৫ · পুরুষ · রক্ত: O+</text>
+  <text x="88" y="154" fill="#c9b896" font-size="9" font-family="sans-serif">আইডি: HB-20241101</text>
+  <!-- Vitals -->
+  <rect x="8" y="190" width="264" height="96" fill="#0a0806"/>
+  <text x="22" y="208" fill="#c9b896" font-size="10" font-family="sans-serif" font-weight="600">গুরুত্বপূর্ণ তথ্য</text>
+  <rect x="18" y="216" width="72" height="60" rx="8" fill="#14100b"/>
+  <text x="54" y="238" text-anchor="middle" fill="#d4a04c" font-size="16" font-family="sans-serif" font-weight="bold">120</text>
+  <text x="54" y="252" text-anchor="middle" fill="#d4a04c" font-size="9" font-family="sans-serif">/80</text>
+  <text x="54" y="268" text-anchor="middle" fill="#7a6b54" font-size="8" font-family="sans-serif">রক্তচাপ</text>
+  <rect x="98" y="216" width="72" height="60" rx="8" fill="#14100b"/>
+  <text x="134" y="246" text-anchor="middle" fill="#d4a04c" font-size="18" font-family="sans-serif" font-weight="bold">98</text>
+  <text x="134" y="260" text-anchor="middle" fill="#7a6b54" font-size="8" font-family="sans-serif">SpO₂ %</text>
+  <rect x="178" y="216" width="84" height="60" rx="8" fill="#14100b"/>
+  <text x="220" y="246" text-anchor="middle" fill="#d4a04c" font-size="18" font-family="sans-serif" font-weight="bold">72</text>
+  <text x="220" y="260" text-anchor="middle" fill="#7a6b54" font-size="8" font-family="sans-serif">বিপিএম</text>
+  <!-- Appointments -->
+  <rect x="8" y="290" width="264" height="200" fill="#0a0806"/>
+  <text x="22" y="308" fill="#c9b896" font-size="10" font-family="sans-serif" font-weight="600">আসন্ন অ্যাপয়েন্টমেন্ট</text>
+  <rect x="18" y="316" width="244" height="52" rx="8" fill="#14100b"/>
+  <rect x="18" y="316" width="5" height="52" rx="3" fill="#0e8a8a"/>
+  <text x="32" y="336" fill="#f5ebd6" font-size="11" font-family="sans-serif" font-weight="600">ডা. ফাতেমা বেগম</text>
+  <text x="32" y="351" fill="#7a6b54" font-size="9" font-family="sans-serif">হৃদরোগ বিশেষজ্ঞ · ৩ নভে. ২০২৪</text>
+  <rect x="214" y="326" width="38" height="18" rx="9" fill="#0e4a4a"/>
+  <text x="233" y="339" text-anchor="middle" fill="#c9b896" font-size="8" font-family="sans-serif">নিশ্চিত</text>
+  <rect x="18" y="376" width="244" height="52" rx="8" fill="#14100b"/>
+  <rect x="18" y="376" width="5" height="52" rx="3" fill="#d4a04c" opacity="0.6"/>
+  <text x="32" y="396" fill="#f5ebd6" font-size="11" font-family="sans-serif" font-weight="600">ডা. করিম সাহেব</text>
+  <text x="32" y="411" fill="#7a6b54" font-size="9" font-family="sans-serif">অর্থোপেডিক · ১০ নভে. ২০২৪</text>
+  <rect x="208" y="386" width="44" height="18" rx="9" fill="#2a1e0f"/>
+  <text x="230" y="399" text-anchor="middle" fill="#d4a04c" font-size="8" font-family="sans-serif">অপেক্ষায়</text>
+  <!-- Bottom nav -->
+  <rect x="8" y="492" width="264" height="1" fill="#1e1510"/>
+  <rect x="105" y="544" width="70" height="4" rx="2" fill="#2a1e0f"/>
+</svg>

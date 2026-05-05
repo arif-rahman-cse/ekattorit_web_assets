@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="48" fill="#1a0a0a" stroke="#c1272d" stroke-width="2"/>
+  <circle cx="50" cy="50" r="38" fill="none" stroke="#c1272d" stroke-width="0.8" opacity="0.5"/>
+  <circle cx="50" cy="50" r="28" fill="#0a0806"/>
+  <path d="M22 50 Q24 38 32 34 Q28 44 26 50" fill="#c1272d" opacity="0.7"/>
+  <path d="M22 50 Q24 62 32 66 Q28 56 26 50" fill="#c1272d" opacity="0.7"/>
+  <path d="M78 50 Q76 38 68 34 Q72 44 74 50" fill="#c1272d" opacity="0.7"/>
+  <path d="M78 50 Q76 62 68 66 Q72 56 74 50" fill="#c1272d" opacity="0.7"/>
+  <polygon points="50,14 52,20 58,20 53,24 55,30 50,26 45,30 47,24 42,20 48,20" fill="#c1272d"/>
+  <text x="50" y="53" text-anchor="middle" fill="#f5ebd6" font-size="14" font-family="Georgia, serif" font-weight="bold">BUET</text>
+  <text x="50" y="66" text-anchor="middle" fill="#c9b896" font-size="7" font-family="sans-serif" letter-spacing="0.5">ঢাকা, বাংলাদেশ</text>
+</svg>

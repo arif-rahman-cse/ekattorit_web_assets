@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 560">
+  <rect width="280" height="560" rx="28" fill="#1c1108"/>
+  <rect x="8" y="8" width="264" height="544" rx="22" fill="#0a0806"/>
+  <text x="22" y="26" fill="#7a6b54" font-size="10" font-family="sans-serif">09:45</text>
+  <rect x="210" y="15" width="24" height="10" rx="3" fill="none" stroke="#7a6b54" stroke-width="1.5"/>
+  <rect x="211" y="16" width="20" height="8" rx="2" fill="#7a6b54" opacity="0.85"/>
+  <!-- App header - education blue -->
+  <rect x="8" y="34" width="264" height="52" fill="#1a3a5c"/>
+  <text x="140" y="66" text-anchor="middle" fill="#f5ebd6" font-size="13" font-family="sans-serif" font-weight="bold">71 EduConnect</text>
+  <!-- Stats row -->
+  <rect x="8" y="86" width="264" height="80" fill="#0d0a06"/>
+  <rect x="18" y="96" width="74" height="60" rx="8" fill="#14100b"/>
+  <text x="55" y="122" text-anchor="middle" fill="#d4a04c" font-size="20" font-family="sans-serif" font-weight="bold">842</text>
+  <text x="55" y="138" text-anchor="middle" fill="#7a6b54" font-size="8" font-family="sans-serif">শিক্ষার্থী</text>
+  <rect x="100" y="96" width="74" height="60" rx="8" fill="#14100b"/>
+  <text x="137" y="122" text-anchor="middle" fill="#d4a04c" font-size="20" font-family="sans-serif" font-weight="bold">36</text>
+  <text x="137" y="138" text-anchor="middle" fill="#7a6b54" font-size="8" font-family="sans-serif">ক্লাস</text>
+  <rect x="182" y="96" width="80" height="60" rx="8" fill="#14100b"/>
+  <text x="222" y="122" text-anchor="middle" fill="#d4a04c" font-size="20" font-family="sans-serif" font-weight="bold">98%</text>
+  <text x="222" y="138" text-anchor="middle" fill="#7a6b54" font-size="8" font-family="sans-serif">উপস্থিতি</text>
+  <!-- Class list header -->
+  <rect x="8" y="170" width="264" height="36" fill="#0d0a06"/>
+  <text x="22" y="194" fill="#c9b896" font-size="11" font-family="sans-serif" font-weight="600">আজকের ক্লাস রুটিন</text>
+  <!-- Class items -->
+  <rect x="8" y="206" width="264" height="280" fill="#0a0806"/>
+  <rect x="18" y="212" width="244" height="50" rx="8" fill="#14100b"/>
+  <rect x="18" y="212" width="5" height="50" rx="3" fill="#d4a04c"/>
+  <text x="32" y="233" fill="#f5ebd6" font-size="11" font-family="sans-serif" font-weight="600">গণিত — দশম শ্রেণী</text>
+  <text x="32" y="250" fill="#7a6b54" font-size="9" font-family="sans-serif">রুম ২০৩ · ০৮:০০–০৯:৩০</text>
+  <rect x="210" y="224" width="42" height="16" rx="8" fill="#1a3a5c"/>
+  <text x="231" y="236" text-anchor="middle" fill="#c9b896" font-size="8" font-family="sans-serif">চলমান</text>
+  <rect x="18" y="270" width="244" height="50" rx="8" fill="#14100b"/>
+  <rect x="18" y="270" width="5" height="50" rx="3" fill="#c9b896" opacity="0.4"/>
+  <text x="32" y="291" fill="#f5ebd6" font-size="11" font-family="sans-serif" font-weight="600">বিজ্ঞান — নবম শ্রেণী</text>
+  <text x="32" y="308" fill="#7a6b54" font-size="9" font-family="sans-serif">রুম ১০৫ · ১০:০০–১১:৩০</text>
+  <rect x="218" y="282" width="34" height="16" rx="8" fill="#2a1e0f"/>
+  <text x="235" y="294" text-anchor="middle" fill="#7a6b54" font-size="8" font-family="sans-serif">পরবর্তী</text>
+  <rect x="18" y="328" width="244" height="50" rx="8" fill="#14100b"/>
+  <rect x="18" y="328" width="5" height="50" rx="3" fill="#c9b896" opacity="0.4"/>
+  <text x="32" y="349" fill="#f5ebd6" font-size="11" font-family="sans-serif" font-weight="600">ইংরেজি — অষ্টম শ্রেণী</text>
+  <text x="32" y="366" fill="#7a6b54" font-size="9" font-family="sans-serif">রুম ৩০১ · ১২:০০–১৩:৩০</text>
+  <rect x="218" y="340" width="34" height="16" rx="8" fill="#2a1e0f"/>
+  <text x="235" y="352" text-anchor="middle" fill="#7a6b54" font-size="8" font-family="sans-serif">পরবর্তী</text>
+  <rect x="18" y="386" width="244" height="50" rx="8" fill="#14100b"/>
+  <rect x="18" y="386" width="5" height="50" rx="3" fill="#c9b896" opacity="0.4"/>
+  <text x="32" y="407" fill="#f5ebd6" font-size="11" font-family="sans-serif" font-weight="600">ইতিহাস — সপ্তম শ্রেণী</text>
+  <text x="32" y="424" fill="#7a6b54" font-size="9" font-family="sans-serif">রুম ২০৮ · ১৪:০০–১৫:৩০</text>
+  <rect x="218" y="398" width="34" height="16" rx="8" fill="#2a1e0f"/>
+  <text x="235" y="410" text-anchor="middle" fill="#7a6b54" font-size="8" font-family="sans-serif">পরবর্তী</text>
+  <!-- Bottom nav -->
+  <rect x="8" y="492" width="264" height="1" fill="#1e1510"/>
+  <rect x="105" y="544" width="70" height="4" rx="2" fill="#2a1e0f"/>
+</svg>

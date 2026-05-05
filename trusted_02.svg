@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <circle cx="50" cy="50" r="48" fill="#0a1a2e" stroke="#d4a04c" stroke-width="2"/>
+  <circle cx="50" cy="50" r="38" fill="none" stroke="#d4a04c" stroke-width="0.8" opacity="0.5"/>
+  <circle cx="50" cy="50" r="28" fill="#0d0a06"/>
+  <path d="M22 50 Q24 38 32 34 Q28 44 26 50" fill="#1a3a5c" opacity="0.9"/>
+  <path d="M22 50 Q24 62 32 66 Q28 56 26 50" fill="#1a3a5c" opacity="0.9"/>
+  <path d="M78 50 Q76 38 68 34 Q72 44 74 50" fill="#1a3a5c" opacity="0.9"/>
+  <path d="M78 50 Q76 62 68 66 Q72 56 74 50" fill="#1a3a5c" opacity="0.9"/>
+  <polygon points="50,14 52,20 58,20 53,24 55,30 50,26 45,30 47,24 42,20 48,20" fill="#d4a04c"/>
+  <text x="50" y="53" text-anchor="middle" fill="#d4a04c" font-size="14" font-family="Georgia, serif" font-weight="bold">BOU</text>
+  <text x="50" y="66" text-anchor="middle" fill="#d4a04c" font-size="7" font-family="sans-serif" letter-spacing="0.5">বাংলাদেশ</text>
+  <text x="50" y="75" text-anchor="middle" fill="#d4a04c" font-size="6" font-family="sans-serif" letter-spacing="0.5">ওপেন ইউনি.</text>
+</svg>

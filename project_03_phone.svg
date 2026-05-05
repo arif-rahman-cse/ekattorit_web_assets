@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 560">
+  <rect width="280" height="560" rx="28" fill="#1c1108"/>
+  <rect x="8" y="8" width="264" height="544" rx="22" fill="#0a0806"/>
+  <text x="22" y="26" fill="#7a6b54" font-size="10" font-family="sans-serif">11:30</text>
+  <rect x="210" y="15" width="24" height="10" rx="3" fill="none" stroke="#7a6b54" stroke-width="1.5"/>
+  <rect x="211" y="16" width="22" height="8" rx="2" fill="#7a6b54"/>
+  <!-- Header -->
+  <rect x="8" y="34" width="264" height="52" fill="#1c1108"/>
+  <rect x="8" y="34" width="264" height="52" fill="url(#goldGrad)" opacity="0.9"/>
+  <defs>
+    <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#d4a04c"/>
+      <stop offset="100%" stop-color="#f4c674"/>
+    </linearGradient>
+  </defs>
+  <text x="50" y="66" fill="#0a0806" font-size="14" font-family="sans-serif" font-weight="bold">71 Commerce</text>
+  <!-- Search bar -->
+  <rect x="8" y="86" width="264" height="50" fill="#0d0a06"/>
+  <rect x="18" y="96" width="244" height="30" rx="15" fill="#14100b" stroke="#2a1e0f" stroke-width="1"/>
+  <text x="40" y="116" fill="#7a6b54" font-size="10" font-family="sans-serif">পণ্য খুঁজুন...</text>
+  <!-- Category strip -->
+  <rect x="8" y="136" width="264" height="44" fill="#0a0806"/>
+  <rect x="18" y="142" width="56" height="30" rx="15" fill="#d4a04c"/>
+  <text x="46" y="162" text-anchor="middle" fill="#0a0806" font-size="9" font-family="sans-serif" font-weight="bold">সব</text>
+  <rect x="82" y="142" width="60" height="30" rx="15" fill="#14100b"/>
+  <text x="112" y="162" text-anchor="middle" fill="#c9b896" font-size="9" font-family="sans-serif">পোশাক</text>
+  <rect x="150" y="142" width="60" height="30" rx="15" fill="#14100b"/>
+  <text x="180" y="162" text-anchor="middle" fill="#c9b896" font-size="9" font-family="sans-serif">ইলেকট্রনিক্স</text>
+  <!-- Product grid -->
+  <rect x="8" y="184" width="264" height="300" fill="#0a0806"/>
+  <!-- Product 1 -->
+  <rect x="18" y="190" width="116" height="140" rx="10" fill="#14100b"/>
+  <rect x="28" y="198" width="96" height="80" rx="6" fill="#1e1510"/>
+  <text x="76" y="244" text-anchor="middle" fill="#d4a04c" font-size="28" font-family="sans-serif">👕</text>
+  <text x="76" y="294" text-anchor="middle" fill="#f5ebd6" font-size="10" font-family="sans-serif" font-weight="600">বাটিক শার্ট</text>
+  <text x="76" y="308" text-anchor="middle" fill="#d4a04c" font-size="11" font-family="sans-serif" font-weight="bold">৳ ৮৫০</text>
+  <!-- Product 2 -->
+  <rect x="146" y="190" width="116" height="140" rx="10" fill="#14100b"/>
+  <rect x="156" y="198" width="96" height="80" rx="6" fill="#1e1510"/>
+  <text x="204" y="244" text-anchor="middle" fill="#d4a04c" font-size="28" font-family="sans-serif">📱</text>
+  <text x="204" y="294" text-anchor="middle" fill="#f5ebd6" font-size="10" font-family="sans-serif" font-weight="600">স্মার্টফোন</text>
+  <text x="204" y="308" text-anchor="middle" fill="#d4a04c" font-size="11" font-family="sans-serif" font-weight="bold">৳ ১৮,৫০০</text>
+  <!-- Product 3 -->
+  <rect x="18" y="338" width="116" height="140" rx="10" fill="#14100b"/>
+  <rect x="28" y="346" width="96" height="80" rx="6" fill="#1e1510"/>
+  <text x="76" y="392" text-anchor="middle" fill="#d4a04c" font-size="28" font-family="sans-serif">👟</text>
+  <text x="76" y="442" text-anchor="middle" fill="#f5ebd6" font-size="10" font-family="sans-serif" font-weight="600">স্পোর্টস শু</text>
+  <text x="76" y="456" text-anchor="middle" fill="#d4a04c" font-size="11" font-family="sans-serif" font-weight="bold">৳ ১,২০০</text>
+  <!-- Product 4 -->
+  <rect x="146" y="338" width="116" height="140" rx="10" fill="#14100b"/>
+  <rect x="156" y="346" width="96" height="80" rx="6" fill="#1e1510"/>
+  <text x="204" y="392" text-anchor="middle" fill="#d4a04c" font-size="28" font-family="sans-serif">🎒</text>
+  <text x="204" y="442" text-anchor="middle" fill="#f5ebd6" font-size="10" font-family="sans-serif" font-weight="600">ব্যাকপ্যাক</text>
+  <text x="204" y="456" text-anchor="middle" fill="#d4a04c" font-size="11" font-family="sans-serif" font-weight="bold">৳ ৬৫০</text>
+  <!-- Bottom nav -->
+  <rect x="8" y="492" width="264" height="1" fill="#1e1510"/>
+  <rect x="105" y="544" width="70" height="4" rx="2" fill="#2a1e0f"/>
+</svg>
